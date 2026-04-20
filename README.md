@@ -26,6 +26,21 @@ Go Gin API scaffold built from the frontend requirements in the public repositor
 4. Apply `migrations/002_seed.sql`
 5. Run `go run ./cmd/api`
 
+## Adminer for PostgreSQL
+
+If you want a phpMyAdmin-like UI for PostgreSQL, this repo includes `docker-compose.adminer.yml`.
+
+1. Start Adminer with `docker compose -f docker-compose.adminer.yml up -d`
+2. Open `http://localhost:18082`
+3. Login with:
+   - system: `PostgreSQL`
+   - server: `host.docker.internal`
+   - username: `postgres`
+   - password: `postgres`
+   - database: `pilatesreformer`
+
+This setup assumes PostgreSQL is exposed on `localhost:5432`, which matches the current `.env` and local Docker setup.
+
 ## Demo credentials
 
 - admin: `admin@reformrental.com` / `password123`
